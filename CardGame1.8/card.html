@@ -1,0 +1,2384 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Super trunfo</title>
+        <link rel="icon" type="image/png" href="imgs/favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Web-version of KAMP">
+        <meta name="author" content="Card Game Author">
+        
+      
+
+        <!-- Styles -->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.css">
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic">
+        <style>
+            hr {
+                margin-top:5px;
+                margin-bottom:5px;
+            }
+            p{
+                font-size:12px;
+            }
+            .thumb-selected{
+                background-color:#f5f5f5;
+                border: 1px solid black;
+                border-radius: 4px;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+            }
+	    div.caption p.ajuste{
+	    	min-height:150px;
+	    	max-height:300px;
+            }
+
+            button{
+                 display:inline-block;
+                border-radius: 5px;
+                background-color: #fa8072;
+                border: none;
+                color: #f5f5f5;
+                text-align: center;
+                font-size: 18px;
+                padding: 18px;
+                width: 185px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 4px
+
+            }
+            div.caption h4,h2.swal2-title div.title{
+                font-style: italic;
+            }
+           
+        }
+
+        </style>
+    </head>
+    <body> 
+
+                  
+        <div class="container">
+            <!-- TOP BAR NAVIGATION -->
+            <nav class="navbar navbar-default" style="margin-top:15px;">
+              <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="index.html">Home</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                  <ul class="nav navbar-nav navbar-right">
+                    
+                    <li><a class="show-cards"  href="#"><i class="fa fa-edit"></i> Mostrar atributos</a></li>
+                    
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+              </div><!-- /.container-fluid -->
+            </nav>
+        
+          <div class="row">  
+             <div id="bac1">             
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="1" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria1.jpg" style="width:400px;height:200px" alt="Bacteria 1">
+                  </a>
+                  <div class="caption">
+                   <h4>Bdellovibrio sp.</h4> 
+                   
+                    <p class="ajuste">Bdellovibrio sp. é uma bactéria predadora, que ao se inserir em outra bactéria suga seus nutrientes, e utiliza as organelas da sua hospedeira para adquirir energia para sua reprodução, e depois de se reproduzir as estruturas da bactéria se rompem, e as predadoras saem a procura de novas hospedeiras.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="GEN">
+                        <div class="col-xs-5 pull-right">
+                           <p>3.8 Mb</p>
+                        </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.2 a 0.5 μm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>7.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>30ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>45,5%</p>
+                       </div>
+                      </div>
+                    </div>
+                   </div>
+                  <hr />
+                  </div>
+                 </div>
+                 </div>
+               <div id="bac2">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="2" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria2.jpg" style="width:400px;height:200px" alt="Bacteria 2">
+                  </a>
+                  <div class="caption">
+                    <h4>Lactobacillus salivarius</h4>
+                    <p class="ajuste">Lactobacillus salivarius é uma bactéria não patogênica que é encontrada no sistema gastrointestinal, que possui várias características terapêuticas: ela pode aliviar desconfortos intestinais, ajudar no tratamento da dermatite atópica, e aliviar os sintomas da asma.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="GEN">
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>2.3 Mb</p>
+                        </div>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.9 μm</p>
+                        </div>
+                    </div>
+                    <hr />
+                   <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>2.6</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>37ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>32,9%</p>
+                       </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                </div>
+              </div>
+             </div>
+               <div id="bac3">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="3" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria3.jpg" style="width:400px;height:200px" alt="Bacteria 3">
+                  </a>
+                  <div class="caption">
+                    <h4>Oscillibacter valericigenes</h4>
+                    <p class="ajuste">Oscillibacter valericigenes é uma bactéria que produz uma substância parecida com que o GABA produz, inibindo o sistema nervoso e que pode levar a depressão.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>2.3 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>2.5–6.0 μm </p>
+                        </div>
+                    </div>
+                    <hr />
+                   <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>6.0-6.5</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>30ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>59.3%</p>
+                         </div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+              <div id="bac4">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="4" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria4.jpg" style="width:400px;height:200px" alt="Bacteria 4">
+                  </a>
+                  <div class="caption">
+                    <h4>Chloroflexus aurantiacus</h4>
+                    <p  class="ajuste">Mais conhecida como Green and Purple Sulfur Bacteria pois produzem um pigmento onde dão a sua coloração a água. É uma bactéria que realiza fotossíntese para obter carboidratos e não produz oxigênio. A bactéria Purple não necessariamente terá a cor roxa, sua coloração pode variar sendo vinho, roxo ou marrom. Já a verde pode ser laranja, verde, amarelo esverdeado, verde alaranjado ou marrom.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>5.2 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.6–0.7 μm</p>
+                        </div>
+                    </div>
+                    <hr />
+                   <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>8.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>52.0°C a 60°C</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>56.7%</p>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <hr />
+                 </div>
+              </div>
+              </div>
+               <div id="bac5">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="5" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria5.jpg" style="width:400px;height:200px" alt="Bacteria 5">
+                  </a>
+                  <div class="caption">
+                    <h4>Thiomargarita namibiensis</h4>
+                    <p>Thiomargarita namibiensis é considerada a maior bactéria descoberta pelo homem, chegando a 0.75mm de diâmetro, ela é quimioautotrófica, ou seja respira por meio de compostos químicos, e se alimenta de enxofre e algas em decomposição.</p>
+                    <hr />
+
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>4.8-13.0 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.75 μm</p>
+                        </div>
+                    </div>
+                    <hr />
+                     <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>10°C a 25°C</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>42.1%</p>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id="bac6">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="6" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria6.jpg" style="width:400px;height:200px" alt="Bacteria 6">
+                  </a>
+                  <div class="caption">
+                    <h4>Bacillus thuringiensis </h4>
+                    <p class="ajuste">Bacillus thuringiensis foi descoberta em 1911, e poucos anos depois foi descoberto que essa bactéria produz uma proteína que tem efeito inseticida, e desde 1938 passou a ser usada nas plantações. </p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>6.1 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>1 µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>30°C</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>35%</p>
+                          </div>
+                      </div>
+                        </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+              <div id="bac7">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="7" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria7.jpg" style="width:400px;height:200px" alt="Bacteria 7">
+                  </a>
+                  <div class="caption">
+                    <h4>Haemophilus influenzae</h4>
+                    <p class="ajuste">Haemophilus influenzae é uma bactéria patogênica somente a seres humanos, e vem causando doenças e infecções desde 1892, meningite ou pneumonia são causadas pela bactéria, se em contato com o sangue pode levar a doenças mais graves.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">                    
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>1.8 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>1 µm</p>
+                        </div>
+                    </div>
+                    <hr />                    
+		                <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>7.6</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>37°C</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>38%</p>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <hr />
+                </div>
+              </div>
+             </div>
+           <hr/>
+           <div id="bac8">
+       <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="8" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria8.jpg" style="width:400px;height:200px" alt="Bacteria 5">
+                  </a>
+                  <div class="caption">
+                    <h4>Klebsiella pneumoniae</h4>
+                    <p class="ajuste">Klebsiella pneumoniae é uma bactéria que pode causar a pneumonia, sendo mais frequentes infecções urinárias ou hospitalares tendo como público alvo portadores de HIV.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>5 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p> 0.3 a 1.5 µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                     <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>7.2</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>37°C</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>57.1%</p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+                    <div id="bac9">
+	          <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="9" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria9.jpg" style="width:400px;height:200px" alt="Bacteria 2">
+                  </a>
+                  <div class="caption">
+                    <h4>Stafilococcus Aureus</h4>
+                    <p class="ajuste"> interna do corpo, podendo causar desde doenças simples como celulite ou terçol, mas se em contato com o sangue pode gerar doenças mais graves como Pneumonia ou infecções nos rins.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>2.8 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.8 μm</p>
+                        </div>
+                    </div>
+                    <hr />
+                   <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>7-7.5</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>37ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>32,9%</p>
+                        </div>
+                      </div>
+                    </div>
+                   <hr/>
+                  </div>
+                </div>
+              </div>
+              </div>
+                </a>
+                 <div id=bac10>
+                 <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="10" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria10.jpg" style="width:400px;height:200px" alt="Bacteria 10">                
+                  <div class="caption">
+                    <h4>Vibrio Fischeri.</h4>
+                    <p class="ajuste"> Vibrio Fischeri é uma bactéria que em vida livre passa despercebida aos olhos humanos, porém quando em contato com um organismo animal, produz reações químicas que geram luminescência fazendo com que o ser hospedeiro ganhe “brilho” também.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>4.2 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.8 a 1.3 μm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>7.5-8.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>26ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+		       <div class="row">
+                        <div class="col-xs-1">                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>38%</p>
+                        </div>
+                    </div>
+                    </div>
+                      </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id=bac11>   
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="11" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria11.jpg" style="width:400px;height:200px" alt="Bacteria 11">
+                  </a>
+                  <div class="caption">
+                    <h4>Botrytis cinerea </h4>
+                    <p class="ajuste">Botrytis cinerea é um fungo que causa doença em colheitas desidratando a planta e a deixando com uma coloração acinzentada, mas nas plantações de uva, quando controlada pode produzir um vinho nobre.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>42.1 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>15 µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>4.5</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>26ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left MGC">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right">
+                            <p>42,5%</p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+		<div id=bac12>
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="12" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria12.jpg" style="width:400px;height:200px" alt="Bacteria 12">
+                  </a>
+			   <div class="caption">
+                    <h4>Penicillium chrysogenum </h4>
+                    <p class="ajuste">Penicillium chrysogenum é um fungo que foi descoberto em 1928, por um médico que saiu de férias e quando voltou percebeu que as placas de bactérias tinham sido inibidas por uma colônia deste fungo, e com mais estudos conseguiram produzir a penicilina que é um antibiótico natural  muito usado. </p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>32.3 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>10 µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>6.5</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>25ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>48,9%</p>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id=bac13>
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="13" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria13.jpg" style="width:400px;height:200px" alt="Bacteria 13">
+                  </a>
+                  
+                  <div class="caption">
+                    <h4>Aspergillus oryzae </h4>
+                    <p class="ajuste">Aspergillus oryzae é um fungo usado pelos agricultores japoneses e chineses no cultivo de arroz, acredita que uso deste fungo na agricultura oriental já passa dos dois mil anos, porém o tamanho do genoma deste só foi revelado em 2005.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>36.4 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>5.0 a 5.5</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>24ºC a 26ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>48,3%</p>
+                        </div>
+                     </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+
+                 <div id="bac14">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="14" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria14.jpg" style="width:400px;height:200px" alt="Bacteria 14">
+                  </a>
+                  <div class="caption">
+                    <h4>Fusarium oxysporum </h4>
+                    <p class="ajuste">Fusarium oxysporum é um fungo que cresce em solos, e por meio de sementes pode infectar a planta impedindo seu crescimento e a deixando com manchas amarelas.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>51.7 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p> 3-4.5 µm </p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>24ºC a 26ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>47,6%</p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+                <div id=bac15 >
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="15" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria15.jpg" style="width:400px;height:200px" alt="Bacteria 15">
+                  </a>
+                  <div class="caption">
+                    <h4>Ganoderma lucidum</h4>
+                    <p class="ajuste">Ganoderma lucidum é um fungo medicinal popular na Ásia por conta de seus vários benefícios naturais e nenhum efeito colateral, pelos registros é utilizado pela medicina japonesa há mais de 4000 anos.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>43.2 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>2 a 30cm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>4.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>30-35ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>55,3%</p>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+                </div>
+           <div id="bac16">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="16" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria16.jpg" style="width:400px;height:200px" alt="Bacteria 16">
+                  </a>
+                  <div class="caption">
+                    <h4>Aspergillus oryzae </h4>
+                    <p class="ajuste">Verticillium dahliae é um fungo que em contato com plantas causa doenças onde a vegetação perde a coloração e fica contorcida, podendo levar o perecimento da plantação.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>36 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>2-13µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>6.45</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>26ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>54%</p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+	        <div id="bac17">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="17" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria17.jpg" style="width:400px;height:200px" alt="Bacteria 17">
+                  </a>
+                  <div class="caption">
+                    <h4>Aspergillus oryzae </h4>
+                    <p class="ajuste">Gibberella zeae é um fungo que causou perdas de bilhões de dólares nos agricultores dos EUA, pois ataca o trigo e cereais, levando grandes perdas na agricultura.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>36.5 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>5.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>24ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>43.3%</p>
+                        </div>
+                      </div>
+                       </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+                <div id="bac18">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="18" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria18.jpg" style="width:400px;height:200px" alt="Bacteria 18">
+                  </a>
+                  <div class="caption">
+                    <h4>Aspergillus niger</h4>
+                    <p class="ajuste">Aspergillus niger é um fungo que está presente no solo, e pode causar o mofo preto em alguns alimentos.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>34.8 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>3-5 µm </p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>6.5-7.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>35ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>49.5%</p>
+                        </div>
+                       </div>
+                    </div>
+                      </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+                <div id="bac19">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="19" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria19.jpg" style="width:400px;height:200px" alt="Bacteria 19">
+                  </a>
+                  <div class="caption">
+                    <h4>Saccharomyces cerevisiae</h4>
+                    <p class="ajuste">Saccharomyces cerevisiae é um fungo popular, muito usado na produção de cerveja (converte açúcar em álcool), pão (libera dióxido de carbono) e etanol.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                    
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>12.1 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>5-6µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>4-6</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>24-26ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>38.4%</p>
+                        </div>
+                      </div>
+                    </div>
+                      </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id="bac20">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="20" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria20.jpg" style="width:400px;height:200px" alt="Bacteria 20">
+                  </a>
+                  <div class="caption">
+                    <h4>Methanopyrus kandleri</h4>
+                    <p class="ajuste">Methanopyrus kandleri é uma archaea que foi encontrada no Golfo da Califórnia que pode sobreviver a temperaturas muito altas (122ºC).</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>1.6 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.5µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>6.5</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>98ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>61,2%</p>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id="bac21">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="21" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria21.jpg" style="width:400px;height:200px" alt="Bacteria 21">
+                  </a>
+                  <div class="caption">
+                    <h4>Pyrococcus furiosus</h4>
+                    <p class="ajuste">Pyrococcus furiosus é uma archaea que tem sua temperatura ótima muito alta podendo viver em lugares inabitáveis para muitos seres vivos.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>1.9 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>2.5 µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>7.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>100ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>40,8%</p>
+                        </div>
+                     </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id="bac22">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="22" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria22.jpg" style="width:400px;height:200px" alt="Bacteria 22">
+                  </a>
+                  <div class="caption">
+                    <h4>Thermococcus thioreducens </h4>
+                    <p class="ajuste">Thermococcus thioreducens é uma archaea que é encontrada em locais como fontes termais e vulcões.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                    
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>2.05 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.7-1.7µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>7.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>85ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>53,5%</p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id="bac23">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="23" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria23.jpg" style="width:400px;height:200px" alt="Bacteria 23">
+                  </a>
+                  <div class="caption">
+                    <h4>Archaeoglobus fulgidus </h4>
+                    <p class="ajuste">Archaeoglobus fulgidus é uma archaea que foi encontrada em fontes hidrotermais, e sua alta temperatura ajuda na produção de petróleo. </p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>2.1 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.4-1.0µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>7.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>83ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>48,6%</p>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+                <div id="bac24">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="24" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria24.jpg" style="width:400px;height:200px" alt="Bacteria 24">
+                  </a>
+                  <div class="caption">
+                    <h4>Thermococcus gammatolerans </h4>
+                    <p class="ajuste">Thermococcus gammatolerans é uma archaea que foi encontrada a mais de 2000 metros abaixo do golfo da Califórnia em 2003 e é organismo mais resistente a radiação já registrado.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>2.04 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.5-.3.0µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>6.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>88ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>53,6%</p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+                <div id="bac25">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="25" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria25.jpg" style="width:400px;height:200px" alt="Bacteria 25">
+                  </a>
+                  <div class="caption">
+                    <h4>Sulfolobus acidocaldarius</h4>
+                    <p class="ajuste">Sulfolobus acidocaldarius é uma archaea termoacidofílica, e foi a primeira espécie do género Sulfolobus a ser descrita, por Thomas Brock em 1972.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>2.2 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.8-1.0µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>2.0-3.0</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>70-75ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>36,7%</p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id=bac26>
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="26" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria26.jpg" style="width:400px;height:200px" alt="Bacteria 26">
+                  </a>
+                  <div class="caption">
+                    <h4>Methanobrevibacter smithii </h4>
+                    <p class="ajuste">Methanobrevibacter smithii é uma archaea muito comum no corpo humano e ajuda na digestão de açúcares.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>1.8 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>0.5µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>6.9-7.4</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>38ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>30,5%</p>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+               <div id="bac27">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="27" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria27.jpg" style="width:400px;height:200px" alt="Bacteria 27">
+                  </a>
+                  <div class="caption">
+                    <h4>Sulfolobus solfataricus </h4>
+                    <p class="ajuste">Sulfolobus solfataricus é uma archaea foi encontrada em uma cratera de vulcão, porém ela pode viver em qualquer local que tenha concentrações de enxofre ou seja uma fonte termal.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>2.7 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                            <p>0.8-2.0µm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>2.5-3.5</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>85ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>35,8%</p>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+
+           <div id="bac28">
+              <div class="col-sm-4 col-md-3">
+                <div class="thumbnail">
+                  <a id="28" class="bacteria-img" href="#">
+                      <img src="imgs/bacteria28.jpg" style="width:400px;height:200px" alt="Bacteria 28">
+                  </a>
+                  <div class="caption">
+                    <h4>Picrophilus torridus </h4>
+                    <p class="ajuste">Picrophilus torridus é uma arquea que diferente de outros seres vivos é capaz de viver em ambientes onde o pH é 0, e se adapta muito bem em ácido sulfúrico.</p>
+                    <hr />
+                    <div class="bac">
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/genome.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Genoma</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right GEN">
+                           <p>1.5 Mb</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                            <img src="imgs/shapes.png" width="16" height="16">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Tamanho</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TAM">
+                            <p>1.5mm</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>pH</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right PHO">
+                            <p>0.7</p>
+                        </div>
+                    </div>
+                    <hr />
+					 <div class="row">
+                        <div class="col-xs-1">
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Temperatura Ótima</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right TPO">
+                           <p>60ºC</p>
+                        </div>
+                    </div>
+                    <hr />
+					<div class="row">
+                        <div class="col-xs-1">
+                           
+                        </div>
+                        <div class="col-xs-5 pull-left">
+                            <b><p>Média GC</p></b>
+                        </div>
+                        <div class="col-xs-5 pull-right MGC">
+                            <p>36%</p>
+                        </div>
+                       </div>
+                      </div>
+                    </div>
+                    <hr />
+                  </div>
+                </div>
+              </div>
+              </div>
+              <hr>
+	   
+             <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            &copy; Copyright Card Games author: Júlia Castro; Carlos Henrique; Daniel Morais.
+                        </div>
+                        <div class="col-md-4 pull-right" style="text-align:end;padding-top:15px;">
+                        <!-- Open Knowledge Link -->
+                            <a href="http://opendefinition.org/okd" target='_blank'>
+                                <img alt="This material is Open Knowledge" border="0" src="http://assets.okfn.org/images/ok_buttons/ok_80x15_blue.png" />
+                            </a>
+                        <!-- /Open Knowledge Link -->
+                            <p>
+                                <font size="1">Best viewed using <a target="_blank" href="http://www.google.com/chrome">Chrome</a> on 1280x960 resolution and above</font>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>  
+
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/sweetalert2/6.1.1/sweetalert2.min.js"></script>
+        <script>
+
+            $(document).ready(function(){
+                $('.bac').hide();
+               
+                $("a.show-cards").click(function(e){
+                    e.preventDefault();               
+                    $('.bac').show(800);                
+                });          
+               
+                $("a.bacteria-img").on("click",function(e){
+                    e.preventDefault();
+                    var thumbnail = $(this).parent()
+
+                    if(thumbnail.hasClass("thumb-selected")){
+                        $(this).parent().removeClass("thumb-selected");
+                    }
+                    else{
+                        var thumbs_selected_counter = $(".thumb-selected").length
+                        if(thumbs_selected_counter == 2){
+                            swal({
+                                title:'Informação!',
+                                text:'Você só pode selecionar duas cartas a cada rodada!',
+                                type:'info'
+                            });
+                        }
+                        else{
+                            $(this).parent().addClass("thumb-selected");
+                            if(thumbs_selected_counter == 1){
+                                swal({
+                                    title: 'Selecione um dos atributos para "duelar"',
+                                    input: 'select',
+                                    type: 'question',
+                                    inputOptions: {
+                                       'GEN': 'Genoma',
+                                        'TAM': 'Tamanho',
+                                        'PHO': 'pH',
+                                        'TPO': 'Temperatura ótima',
+                                        'MGC': 'Média GC',
+                                    },
+                                    inputPlaceholder: 'Seleciona um atributo',
+                                    showCancelButton: true,
+                                    inputValidator: function (value) {
+                                        return new Promise(function (resolve, reject) {
+                                            resolve();
+                                        });
+                                    }
+                                }).then(function (result) {
+									var cards = $(".thumb-selected");
+									var card1 = cards.first();
+									var card2 = cards.last();
+									if(result == 'GEN'){
+                                            var attr_card1 = card1.find("div.GEN").text();
+                                            var attr_card2 = card2.find("div.GEN").text();
+
+                                            if(parseFloat(attr_card2) < parseFloat(attr_card1)){
+                                                swal({
+													type:'success',
+                                                    title: '<div class="title">'+card1.find('h4').text() + '</div> Ganhou',
+                                                });        
+                                            }
+                                            else{
+                                                swal({
+													type:'success',
+                                                    title: '<div class="title">'+card2.find('h4').text() + '</div>  Ganhou',
+                                                });
+                                            }
+                                    }
+                                    else if(result == 'TAM'){
+                                        //var cards = $(".thumb-selected");
+                                        var attr_card1 = card1.find("div.TAM").text();
+                                        var attr_card2 = card2.find("div.TAM").text();
+
+                                        if(parseFloat(attr_card2) < parseFloat(attr_card1)){
+                                            swal({
+                                                type:'success',
+                                                title: '<div class="title">'+card1.find('h4').text() + '</div> Ganhou',
+                                            });
+                                        }
+                                        else{
+                                            swal({
+                                                type:'success',
+                                                title: '<div class="title">'+card2.find('h4').text() + '</div> Ganhou',
+                                            });
+                                        }
+                                    }
+                                    else if(result == 'PHO'){
+                                        //var cards = $ (".thumb-selected");
+                                        var attr_card1 = card1.find("div.PHO").text();
+                                        var attr_card2 = card2.find("div.PHO").text();
+
+                                        if (parseFloat(attr_card2) < parseFloat(attr_card1)){
+                                            swal({
+                                                type:'success',
+                                                title: '<div class="title">'+card1.find('h4').text() + ' </div> Ganhou',
+                                            });                                            
+                                        }
+                                        else{
+											swal({
+                                                type:'success',
+												title: '<div class="title">'+card2.find('h4').text() + '</div> Ganhou'
+											});
+										}
+									}
+                                    else if(result =='TPO'){
+										//var cards = $ (".thumb-selectedm");
+										var attr_card1 = card1.find("div.TPO").text();
+										var attr_card2 = card2.find("div.TPO").text();
+
+										if (parseFloat(attr_card2) < parseFloat(attr_card1)){
+											swal({
+                                                type:'success',
+												title: '<div class="title">'+card1.find('h4').text() + '</div> Ganhou'
+											});
+										}
+										else{
+											swal({
+                                                type:'success',
+												title: '<div class="title">'+card2.find('h4').text() + '</div> Ganhou'
+											});
+										}
+
+									}
+									else{
+										//var card = $ (".thumb-selectedm");
+										var attr_card1 = card1.find("div.MGC").text();
+										var attr_card2 = card2.find("div.MGC").text();
+
+										if (parseFloat(attr_card2) < parseFloat(attr_card1t)){
+											swal({
+                                                type:'success',
+												title: '<div class="title">'+card1.find('h4').text() + '</div> Ganhou'
+											});
+
+										}
+										else{
+											swal({
+                                                type:'success',
+												title: '<div class="title">'+card2.find('h4').text() + '</div> Ganhou'
+											});
+										}
+									}           
+                                });
+                            }
+                        }
+                    }
+                });
+			});
+        </script>
+    </body>
+</html>
+
